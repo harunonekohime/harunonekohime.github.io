@@ -35,7 +35,7 @@
 
 <script setup lang="ts">
   import { ref } from 'vue'
-  import type { Ref } from 'vue';
+  import type { Ref } from 'vue'
   import { useEventBus } from '@vueuse/core'
 
   const menuIsOpen: Ref<boolean> = ref(false)
@@ -46,14 +46,14 @@
     return {
       'switch-close': menuIsOpen.value,
       'switch-menu': !menuIsOpen.value
-    };
-  };
+    }
+  }
 
   const listClasses = (index: number) => {
     return {
       active: activeState.value === index,
-    };
-  };
+    }
+  }
 
   const toggleMenu = () => {
     if (menuIsOpen.value) {
@@ -61,17 +61,17 @@
     } else {
       openMenu()
     }
-  };
+  }
 
   const openMenu = () => {
     menuIsOpen.value = true
     document.body.classList.add('blur')
-  };
+  }
 
   const closeMenu = () => {
     menuIsOpen.value = false
     document.body.classList.remove('blur')
-  };
+  }
 
   const setItemActive = (index: number, hash: string) => {
     activeState.value = index
@@ -89,7 +89,7 @@
     if (hash === 'skills') {
       skillBus.emit()
     }
-  };
+  }
 </script>
 
 <style lang="scss">

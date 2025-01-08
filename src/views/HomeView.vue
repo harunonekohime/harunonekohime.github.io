@@ -9,14 +9,15 @@
     <v-footer/>
   </main>
 </template>
+
 <script setup lang="ts">
-import vSkills from '../components/v-skills.vue';
-import vHeader from '../components/v-header.vue';
-import vEducation from '../components/v-education.vue';
-import vExperience from '../components/v-experience.vue';
-import vContact from '../components/v-contact.vue';
-import vAbout from '../components/v-about.vue';
-import vFooter from '../components/v-footer.vue';
+import vSkills from '../components/v-skills.vue'
+import vHeader from '../components/v-header.vue'
+import vEducation from '../components/v-education.vue'
+import vExperience from '../components/v-experience.vue'
+import vContact from '../components/v-contact.vue'
+import vAbout from '../components/v-about.vue'
+import vFooter from '../components/v-footer.vue'
 
 </script>
 <style lang="scss">

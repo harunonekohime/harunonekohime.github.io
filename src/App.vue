@@ -2,6 +2,7 @@
   <v-menu></v-menu>
   <RouterView />
 </template>
+
 <script setup lang="ts">
 import vMenu from './components/v-menu.vue'
 </script>

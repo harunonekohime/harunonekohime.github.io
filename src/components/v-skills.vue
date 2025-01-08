@@ -19,16 +19,16 @@
 </template>
 
 <script setup lang="ts">
-  import { ref } from 'vue';
-  import type { Ref } from 'vue';
-  import cvData from '../data/cv.json';
+  import { ref } from 'vue'
+  import type { Ref } from 'vue'
+  import cvData from '../data/cv.json'
   import { useEventBus } from '@vueuse/core'
 
-  const explode: Ref<boolean> = ref(false);
-  const showOverlay: Ref<boolean> = ref(false);
-  const showSkills: Ref<boolean> = ref(false);
-  const animate: Ref<boolean> = ref(false);
-  const hideButton: Ref<boolean> = ref(false);
+  const explode: Ref<boolean> = ref(false)
+  const showOverlay: Ref<boolean> = ref(false)
+  const showSkills: Ref<boolean> = ref(false)
+  const animate: Ref<boolean> = ref(false)
+  const hideButton: Ref<boolean> = ref(false)
   const skillBus = useEventBus('skills')
   const skills: string[] = [
     'JavaScript',
@@ -49,18 +49,18 @@
     'Adobe Photoshop',
     'Adobe InDesign',
     'Adobe XD',
-  ];
+  ]
 
   const getLineStyle = (skill: string) => {
-    const skillData = cvData.skills.find((s: { name: string }) => s.name === skill);
+    const skillData = cvData.skills.find((s: { name: string }) => s.name === skill)
     return skillData && animate.value
       ? { '--skill-width': `${skillData.width}%` }
-      : { '--skill-width': '0%' };
+      : { '--skill-width': '0%' }
   }
 
   skillBus.on(() => {
-    explode.value = true;
-  });
+    explode.value = true
+  })
 </script>
 
 <style lang="scss">
