@@ -1,0 +1,5 @@
+Rights of use for images
+
+The images and other media-specific content in this repository are protected by copyright and may not be copied, modified or reused without the express written consent of the author.
+
+The source code is subject to the MIT License. For more information about the MIT license, see the LICENSE file.
