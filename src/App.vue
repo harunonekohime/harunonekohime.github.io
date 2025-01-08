@@ -15,6 +15,13 @@ body {
   font-family: cascadia;
   font-size: 14px;
   background: #ffeded;
+
+  &.blur {
+    overflow: hidden;
+    main {
+      filter: blur(5px);
+    }
+  }
 }
 
 #app {

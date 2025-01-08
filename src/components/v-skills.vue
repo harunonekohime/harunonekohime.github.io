@@ -21,13 +21,14 @@
 <script setup lang="ts">
 import { ref, Ref } from 'vue';
 import cvData from '../data/cv.json';
+import { useEventBus } from '@vueuse/core'
 
 const explode: Ref<boolean> = ref(false);
 const showOverlay: Ref<boolean> = ref(false);
 const showSkills: Ref<boolean> = ref(false);
 const animate: Ref<boolean> = ref(false);
 const hideButton: Ref<boolean> = ref(false);
-
+const skillBus = useEventBus('skills')
 const skills: string[] = [
   'JavaScript',
   'Vue.js',
@@ -55,6 +56,10 @@ function getLineStyle(skill: string): object {
     ? { '--skill-width': `${skillData.width}%` }
     : { '--skill-width': '0%' };
 }
+
+skillBus.on(() => {
+  explode.value = true;
+});
 </script>
 
 <style lang="scss">
