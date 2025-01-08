@@ -7,7 +7,7 @@
         Dort sammelte ich Erfahrungen in der Entwicklung von Single-Page-Applications und Landingpages mit JavaScript und Vue.js.
       </p>
       <p>
-        In meiner Freizeit spiele ich gerne Videospiele, Klavier und zeichne gerne. Nebenbei betreibe ich einen kleinen Shop auf Etsy, wo ich meine Zeichnungen verkaufe.
+        Ich liebe das Zeichnen, weshalb ich nebenbei einen kleinen Shop auf Etsy betreibe, wo ich meine Zeichnungen verkaufe. Zudem spiele ich gerne Videospiele und Klavier.
       </p>
     </div>
   </v-card>
