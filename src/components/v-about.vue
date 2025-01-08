@@ -18,7 +18,6 @@
 </script>
 
 <style lang="scss">
-
 .card__about {
   background: url('../assets/images/taiyaki-outlines-red.jpg');
   background-size: cover;

@@ -19,47 +19,48 @@
 </template>
 
 <script setup lang="ts">
-import { ref, Ref } from 'vue';
-import cvData from '../data/cv.json';
-import { useEventBus } from '@vueuse/core'
+  import { ref } from 'vue';
+  import type { Ref } from 'vue';
+  import cvData from '../data/cv.json';
+  import { useEventBus } from '@vueuse/core'
 
-const explode: Ref<boolean> = ref(false);
-const showOverlay: Ref<boolean> = ref(false);
-const showSkills: Ref<boolean> = ref(false);
-const animate: Ref<boolean> = ref(false);
-const hideButton: Ref<boolean> = ref(false);
-const skillBus = useEventBus('skills')
-const skills: string[] = [
-  'JavaScript',
-  'Vue.js',
-  'HTML',
-  'CSS',
-  'TailwindCSS',
-  'TypeScript',
-  'JSON',
-  'Node.js',
-  'PHP',
-  'MySQL',
-  'Jest',
-  'Git',
-  'Jira',
-  'Figma',
-  'Sketch',
-  'Adobe Photoshop',
-  'Adobe InDesign',
-  'Adobe XD',
-];
+  const explode: Ref<boolean> = ref(false);
+  const showOverlay: Ref<boolean> = ref(false);
+  const showSkills: Ref<boolean> = ref(false);
+  const animate: Ref<boolean> = ref(false);
+  const hideButton: Ref<boolean> = ref(false);
+  const skillBus = useEventBus('skills')
+  const skills: string[] = [
+    'JavaScript',
+    'Vue.js',
+    'HTML',
+    'CSS',
+    'TailwindCSS',
+    'TypeScript',
+    'JSON',
+    'Node.js',
+    'PHP',
+    'MySQL',
+    'Jest',
+    'Git',
+    'Jira',
+    'Figma',
+    'Sketch',
+    'Adobe Photoshop',
+    'Adobe InDesign',
+    'Adobe XD',
+  ];
 
-function getLineStyle(skill: string): object {
-  const skillData = cvData.skills.find((s: { name: string }) => s.name === skill);
-  return skillData && animate.value
-    ? { '--skill-width': `${skillData.width}%` }
-    : { '--skill-width': '0%' };
-}
+  const getLineStyle = (skill: string) => {
+    const skillData = cvData.skills.find((s: { name: string }) => s.name === skill);
+    return skillData && animate.value
+      ? { '--skill-width': `${skillData.width}%` }
+      : { '--skill-width': '0%' };
+  }
 
-skillBus.on(() => {
-  explode.value = true;
-});
+  skillBus.on(() => {
+    explode.value = true;
+  });
 </script>
 
 <style lang="scss">

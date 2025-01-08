@@ -34,62 +34,62 @@
 </template>
 
 <script setup lang="ts">
-import { ref, Ref } from 'vue'
-import { useEventBus } from '@vueuse/core'
+  import { ref } from 'vue'
+  import type { Ref } from 'vue';
+  import { useEventBus } from '@vueuse/core'
 
-const menuIsOpen: Ref<boolean> = ref(false)
-const activeState: Ref<number> = ref(0)
-const skillBus = useEventBus('skills')
+  const menuIsOpen: Ref<boolean> = ref(false)
+  const activeState: Ref<number> = ref(0)
+  const skillBus = useEventBus('skills')
 
-const navItemClasses = () => {
-  return {
-    'switch-close': menuIsOpen.value,
-    'switch-menu': !menuIsOpen.value
+  const navItemClasses = () => {
+    return {
+      'switch-close': menuIsOpen.value,
+      'switch-menu': !menuIsOpen.value
+    };
   };
-};
 
-const listClasses = (index: number) => {
-  return {
-    active: activeState.value === index,
+  const listClasses = (index: number) => {
+    return {
+      active: activeState.value === index,
+    };
   };
-};
 
-const toggleMenu = () => {
-  if (menuIsOpen.value) {
+  const toggleMenu = () => {
+    if (menuIsOpen.value) {
+      closeMenu()
+    } else {
+      openMenu()
+    }
+  };
+
+  const openMenu = () => {
+    menuIsOpen.value = true
+    document.body.classList.add('blur')
+  };
+
+  const closeMenu = () => {
+    menuIsOpen.value = false
+    document.body.classList.remove('blur')
+  };
+
+  const setItemActive = (index: number, hash: string) => {
+    activeState.value = index
     closeMenu()
-  } else {
-    openMenu()
-  }
-};
 
-const openMenu = () => {
-  menuIsOpen.value = true
-  document.body.classList.add('blur')
-};
+    window.history.pushState(null, '', `#${hash}`)
 
-const closeMenu = () => {
-  menuIsOpen.value = false
-  document.body.classList.remove('blur')
-};
+    const element: any = document.getElementById(hash)
 
-const setItemActive = (index: number, hash: string) => {
-  activeState.value = index
-  closeMenu()
+    window.scrollTo({
+      top: element.offsetTop - 80,
+      behavior: 'smooth'
+    })
 
-  window.history.pushState(null, '', `#${hash}`)
-
-  const element: any = document.getElementById(hash)
-
-  window.scrollTo({
-    top: element.offsetTop - 80,
-    behavior: 'smooth'
-  })
-
-  if (hash === 'skills') {
-    skillBus.emit()
-  }
-};
-
+    if (hash === 'skills') {
+      skillBus.emit()
+    }
+  };
 </script>
 
 <style lang="scss">

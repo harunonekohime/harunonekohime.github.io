@@ -44,8 +44,9 @@
     </div>
   </v-card>
 </template>
+
 <script setup lang="ts">
-import vCard from '../components/v-card.vue';
+  import vCard from '../components/v-card.vue';
 </script>
 
 <style lang="scss">
