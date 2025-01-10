@@ -34,7 +34,7 @@ main {
   flex-direction: column;
   max-width: 700px;
   margin: auto;
-  padding: 100px 20px 0px 20px;
+  padding: 80px 20px 0px 20px;
 
   .heart-container {
     display: flex;
