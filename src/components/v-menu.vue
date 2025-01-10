@@ -113,7 +113,7 @@
     right: 0;
     left: 0;
     padding: 10px;
-    background: #fccfcf;
+    background: #ffbcbc;
     height: 60px;
     z-index: 10000;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
