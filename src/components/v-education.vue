@@ -1,23 +1,23 @@
 <template>
    <v-card id="education">
-      <h2>Bildungsweg</h2>
+      <h2>{{ $t('education.title') }}</h2>
       <div class="data-block">
          <div class="data-block__left">
-            09.2013 – 01.2018
+            {{ $t('education.date1') }}
          </div>
          <div class="data-block__right">
-            <h3>Studium: Technische Hochschule Köln</h3>
-            <p>Studiengang Medieninformatik Bachelor of Science</p>
+            <h3>{{ $t('education.studytext1') }}</h3>
+            <p>{{ $t('education.studytext2') }}</p>
          </div>
       </div>
 
       <div class="data-block">
          <div class="data-block__left">
-            09.2011 – 06.2013
+            {{ $t('education.date2') }}
          </div>
          <div class="data-block__right">
-            <h3>Fachabitur: Fritz-Henßler-Berufskolleg Dortmund</h3>
-            <p>Fachrichtung Gestaltung</p>
+            <h3>{{ $t('education.highschooltext1') }}</h3>
+            <p>{{ $t('education.highschooltext2') }}</p>
          </div>
       </div>
    </v-card>

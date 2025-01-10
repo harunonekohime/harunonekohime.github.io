@@ -1,13 +1,11 @@
 <template>
   <v-card id="contact">
     <div class="contact-wrapper">
-      <h2>Kontakt</h2>
+      <h2>{{ $t('contact.title') }}</h2>
       <div class="contact__content">
         <div class="contact__content__left">
           <p>
-            Haben Sie Fragen oder möchten Sie mich kontaktieren?
-            Schreiben Sie mir einfach eine E-Mail oder kontaktieren
-            Sie mich über die sozialen Medien.
+            {{ $t('contact.text') }}
           </p>
         </div>
         <div class="contact__content__right">

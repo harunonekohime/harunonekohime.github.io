@@ -1,44 +1,44 @@
 <template>
   <v-card id="experience">
-    <h2>Berufserfahrung</h2>
+    <h2>{{ $t('experience.title') }}</h2>
     <div class="data-block">
       <div class="data-block__left">
-        09.2018 – Heute
+        {{ $t('experience.date1') }}
       </div>
       <div class="data-block__right">
-        <h3>RMH MEDIA GmbH</h3>
-        <h4>Web Developer</h4>
+        <h3>{{ $t('experience.company1') }}</h3>
+        <h4>{{ $t('experience.position1') }}</h4>
         <ul>
-          <li>Salesforce/Veeva CRM Webanwendungen mit JavaScript/Vue.js</li>
-          <li>Single-Page-Applicationsmit JavaScript/Vue.js</li>
+          <li>{{ $t('experience.experience1') }}</li>
+          <li>{{ $t('experience.experience2') }}</li>
         </ul>
       </div>
     </div>
 
     <div class="data-block">
       <div class="data-block__left">
-        02.2018 – 09.2018
+        {{ $t('experience.date2') }}
       </div>
       <div class="data-block__right">
-        <h3>Another Monday</h3>
-        <h4>Analyst</h4>
+        <h3>{{ $t('experience.company2') }}</h3>
+        <h4>{{ $t('experience.position2') }}</h4>
         <ul>
-          <li>Quality Assurance</li>
-          <li>Mockups</li>
-          <li>Technische Dokumentationen</li>
+          <li>{{ $t('experience.experience3') }}</li>
+          <li>{{ $t('experience.experience4') }}</li>
+          <li>{{ $t('experience.experience5') }}</li>
         </ul>
       </div>
     </div>
 
     <div class="data-block">
       <div class="data-block__left">
-        08.2017 – 02.2018
+        {{ $t('experience.date3') }}
       </div>
       <div class="data-block__right">
-        <h3>Another Monday</h3>
-        <h4>Werkstudent (Bachelorarbeit)</h4>
+        <h3>{{ $t('experience.company2') }}</h3>
+        <h4>{{ $t('experience.position3') }}</h4>
         <ul>
-          <li>Entwicklung eines Firmeninternen Content-Management-Systems</li>
+          <li>{{ $t('experience.bachelorthesis') }}</li>
         </ul>
       </div>
     </div>

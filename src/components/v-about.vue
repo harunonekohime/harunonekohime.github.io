@@ -1,20 +1,19 @@
 <template>
   <v-card id="about" class="card__about">
     <div class="card__about__content">
-      <h2>Über mich</h2>
+      <h2>{{ $t('about.title') }}</h2>
       <p>
-        Hi ich bin Jess (✿`꒳`)ﾉ! Ich habe Medieninformatik an der Technischen Hochschule Köln studiert und arbeite seit 2018 als Frontend Entwicklerin bei der RMH MEDIA GmbH.
-        Dort sammelte ich Erfahrungen in der Entwicklung von Single-Page-Applications und Landingpages mit JavaScript und Vue.js.
+        {{ $t('about.text1') }}
       </p>
       <p>
-        Ich liebe das Zeichnen, weshalb ich nebenbei einen kleinen Shop auf Etsy betreibe, wo ich meine Zeichnungen verkaufe. Zudem spiele ich gerne Videospiele und Klavier.
+        {{ $t('about.text2') }}
       </p>
     </div>
   </v-card>
 </template>
 
 <script setup lang="ts">
-  import vCard from '../components/v-card.vue';
+  import vCard from '../components/v-card.vue'
 </script>
 
 <style lang="scss">

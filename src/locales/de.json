@@ -1,0 +1,45 @@
+{
+  "about": {
+    "title": "Über Mich",
+    "text1": "Hi ich bin Jess (✿`꒳`)ﾉ! Ich habe Medieninformatik an der Technischen Hochschule Köln studiert und arbeite seit 2018 als Frontend Entwicklerin bei der RMH MEDIA GmbH. Dort sammelte ich Erfahrungen in der Entwicklung von Single-Page-Applications und Landingpages mit JavaScript und Vue.js.",
+    "text2": "Ich liebe das Zeichnen, weshalb ich nebenbei einen kleinen Shop auf Etsy betreibe, wo ich meine Zeichnungen verkaufe. Zudem spiele ich gerne Videospiele und Klavier."
+  },
+
+  "skills": {
+    "title": "Skills"
+  },
+
+  "education": {
+    "title": "Bildungsweg",
+    "date1": "09.2013 – 01.2018",
+    "studytext1": "Studium: Technische Hochschule Köln",
+    "studytext2": "Studiengang: Medieninformatik (Bachelor of Science)",
+    "date2": "09.2011 – 06.2013",
+    "highschooltext1": "Fachabitur: Fritz-Henßler-Berufskolleg Dortmund",
+    "highschooltext2": "Fachrichtung: Gestaltung"
+  },
+
+  "experience": {
+    "title": "Berufserfahrung",
+    "date1":"09.2018 – Heute",
+    "company1": "RMH MEDIA GmbH",
+    "position1": "Frontend Developer",
+    "experience1": "Salesforce/Veeva CRM Webanwendungen mit JavaScript/Vue.js",
+    "experience2": "Single-Page-Applications mit JavaScript/Vue.js",
+    "date2": "02.2018 – 09.2018",
+    "company2": "Another Monday",
+    "position2": "Analyst",
+    "experience3": "Quality Assurance",
+    "experience4": "Mockups",
+    "experience5": "Technische Dokumentationen",
+    "date3": "08.2017 – 02.2018",
+    "position3": "Werkstudent (Bachelorarbeit)",
+    "bachelorthesis": "Entwicklung eines Firmeninternen Content-Management-Systems"
+  },
+
+  "contact": {
+    "title": "Kontakt",
+    "text": "Haben Sie Fragen oder möchten Sie mich kontaktieren? Schreiben Sie mir einfach eine E-Mail oder kontaktieren Sie mich über die sozialen Medien."
+  }
+
+}

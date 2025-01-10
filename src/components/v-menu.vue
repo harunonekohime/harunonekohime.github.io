@@ -1,5 +1,9 @@
 <template>
   <nav>
+    <div class="switch-language" @click="switchLanguage">
+      <span v-if="locale === 'en'" class="fi fi-de"></span>
+      <span v-else class="fi fi-gb"></span>
+    </div>
     <div class="nav__item" @click="toggleMenu">
       <div class="nav__item__line nav__item__line-1" :class="navItemClasses()"></div>
       <div class="nav__item__line nav__item__line-2" :class="navItemClasses()"></div>
@@ -10,23 +14,23 @@
       <ul>
         <li :class="listClasses(1)" @click="setItemActive(1, 'about')">
           <font-awesome-icon class="icon" :icon="['fas', 'id-card']" />
-          <span>Über mich</span>
+          <span>{{ $t('about.title') }}</span>
         </li>
         <li :class="listClasses(2)" @click="setItemActive(2, 'skills')">
           <font-awesome-icon class="icon" :icon="['fas', 'code']" />
-          <span>Skills</span>
+          <span>{{ $t('skills.title') }}</span>
         </li>
         <li :class="listClasses(3)" @click="setItemActive(3, 'education')">
           <font-awesome-icon class="icon" :icon="['fas', 'graduation-cap']" />
-          <span>Bildungsweg</span>
+          <span>{{ $t('education.title') }}</span>
         </li>
         <li :class="listClasses(4)" @click="setItemActive(4, 'experience')">
           <font-awesome-icon class="icon" :icon="['fas', 'briefcase']" />
-          <span>Berufserfahrung</span>
+          <span>{{ $t('experience.title') }}</span>
         </li>
         <li :class="listClasses(5)" @click="setItemActive(5, 'contact')">
           <font-awesome-icon class="icon" :icon="['fas', 'envelope']" />
-          <span>Kontakt</span>
+          <span>{{ $t('contact.title') }}</span>
         </li>
       </ul>
     </div>
@@ -37,10 +41,13 @@
   import { ref } from 'vue'
   import type { Ref } from 'vue'
   import { useEventBus } from '@vueuse/core'
+  import { useStorage } from '@vueuse/core'
+  import "/node_modules/flag-icons/css/flag-icons.min.css";
 
   const menuIsOpen: Ref<boolean> = ref(false)
   const activeState: Ref<number> = ref(0)
   const skillBus = useEventBus('skills')
+  const locale = useStorage('locale', 'de')
 
   const navItemClasses = () => {
     return {
@@ -89,6 +96,11 @@
     if (hash === 'skills') {
       skillBus.emit()
     }
+  }
+
+  const switchLanguage = () => {
+    locale.value = locale.value === 'en' ? 'de' : 'en'
+    window.location.reload()
   }
 </script>
 
@@ -161,6 +173,23 @@
             }
           }
         }
+      }
+    }
+
+    .switch-language {
+      height: 40px;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      background: transparent;
+      cursor: pointer;
+      margin-right: 10px;
+      font-size: 20px;
+
+      span {
+        box-shadow: 0 5px 10px -4px rgba(0, 0, 0, 0.3);
       }
     }
 
