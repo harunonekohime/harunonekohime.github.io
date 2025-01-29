@@ -6,6 +6,36 @@
     <v-education/>
     <v-experience/>
     <v-contact/>
+    <v-carousel>
+      <picture>
+        <source media="(min-width:1280px)" srcset="../assets/images/kimono-bunny.jpeg" />
+        <img src="../assets/images/kimono-bunny.jpeg" alt="kimono-bunny" />
+      </picture>
+      <picture>
+        <source media="(min-width:1280px)" srcset="../assets/images/black-cat.jpeg" />
+        <img src="../assets/images/black-cat.jpeg" alt="black-cat" />
+      </picture>
+      <picture>
+        <source media="(min-width:1280px)" srcset="../assets/images/squirrel.jpeg" />
+        <img src="../assets/images/squirrel.jpeg" alt="squirrel" />
+      </picture>
+      <picture>
+        <source media="(min-width:1280px)" srcset="../assets/images/ramen-neko.jpeg" />
+        <img src="../assets/images/ramen-neko.jpeg" alt="ramen-neko" />
+      </picture>
+      <picture>
+        <source media="(min-width:1280px)" srcset="../assets/images/bird.jpeg" />
+        <img src="../assets/images/bird.jpeg" alt="bird" />
+      </picture>
+      <picture>
+        <source media="(min-width:1280px)" srcset="../assets/images/bumblebee.jpeg" />
+        <img src="../assets/images/bumblebee.jpeg" alt="bumblebee" />
+      </picture>
+      <picture>
+        <source media="(min-width:1280px)" srcset="../assets/images/kimono-cat.jpeg" />
+        <img src="../assets/images/kimono-cat.jpeg" alt="kimono-cat" />
+      </picture>
+    </v-carousel>
     <span class="heart-container">
       Made with Vue.js, TypeScript, HTML, CSS and
       <svg width="112" height="104" viewBox="0 0 112 104" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,6 +54,7 @@ import vExperience from '../components/v-experience.vue'
 import vContact from '../components/v-contact.vue'
 import vAbout from '../components/v-about.vue'
 import vFooter from '../components/v-footer.vue'
+import vCarousel from '../components/v-carousel.vue'
 
 </script>
 <style lang="scss">
@@ -64,6 +95,24 @@ main {
           opacity: 1;
         }
       }
+    }
+  }
+
+  picture {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 20px);
+    object-fit: contain;
+    transition: all 1s;
+    left: 50%;
+
+    source, img {
+      position: absolute;
+      transform: translateX(-50%);
+      height: 100%;
+      border-radius: 8px;
+      border: 20px solid white;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     }
   }
 

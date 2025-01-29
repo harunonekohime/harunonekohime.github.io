@@ -33,12 +33,16 @@
     "experience4": "Mockups",
     "experience5": "Technical documentations",
     "date3": "08.2017 – 02.2018",
-    "position3": "Working student (Bachelorarbeit)",
-    "bachelorthesis": "Development of an internal company content management system"
+    "position3": "Working student (Bachelorthesis)",
+    "bachelorthesis": "Development of an internal company reporting system"
   },
 
   "contact": {
     "title": "Contact",
     "text": "Do you have any questions or would you like to contact me? Just write me an email or contact me via social media."
+  },
+
+  "carousel": {
+    "title": "Drawings"
   }
 }

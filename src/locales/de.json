@@ -34,12 +34,16 @@
     "experience5": "Technische Dokumentationen",
     "date3": "08.2017 – 02.2018",
     "position3": "Werkstudent (Bachelorarbeit)",
-    "bachelorthesis": "Entwicklung eines Firmeninternen Content-Management-Systems"
+    "bachelorthesis": "Entwicklung eines Firmeninternen Reporting-Systems"
   },
 
   "contact": {
     "title": "Kontakt",
     "text": "Haben Sie Fragen oder möchten Sie mich kontaktieren? Schreiben Sie mir einfach eine E-Mail oder kontaktieren Sie mich über die sozialen Medien."
+  },
+
+  "carousel": {
+    "title": "Zeichnungen"
   }
 
 }

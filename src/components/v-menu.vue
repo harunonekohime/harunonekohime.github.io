@@ -1,7 +1,7 @@
 <template>
   <nav>
     <div class="switch-language" @click="switchLanguage">
-      <span v-if="locale === 'en'" class="fi fi-de"></span>
+      <span v-if="locale === 'de'" class="fi fi-de"></span>
       <span v-else class="fi fi-gb"></span>
     </div>
     <div class="nav__item" @click="toggleMenu">
