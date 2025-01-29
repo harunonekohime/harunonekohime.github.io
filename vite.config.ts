@@ -5,7 +5,6 @@ import { resolve, dirname } from 'path'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
-import { compression } from 'vite-plugin-compression2'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -16,11 +15,7 @@ export default defineConfig({
       fullInstall: false,
       compositionOnly: true,
     }),
-    vueDevTools(),
-    compression({
-      include: /\.(js|css|html|svg|json)(\?.*)?$/i,
-      deleteOriginalAssets: true,
-    })
+    vueDevTools()
   ],
   server: {
     port: 3000,
