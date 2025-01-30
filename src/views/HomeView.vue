@@ -74,11 +74,11 @@ main {
     color: #b93a3a;
   }
 
-@media screen and (max-width: 705px) {
-  h2 {
-    font-size: 18px;
+  @media screen and (max-width: 705px) {
+    h2 {
+      font-size: 18px;
+    }
   }
-}
 
   @media screen and (max-width: 468px) {
     .heart-container {
