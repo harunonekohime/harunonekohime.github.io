@@ -1,6 +1,6 @@
 <template>
   <v-card id="contact">
-    <div class="contact-wrapper">
+    <div class="contact">
       <h2>{{ $t('contact.title') }}</h2>
       <div class="contact__content">
         <div class="contact__content__left">
@@ -43,7 +43,7 @@
   background-size: cover;
   margin-bottom: 0;
 
-  .contact-wrapper {
+  .contact {
     background: white;
     border-radius: 8px;
     padding: 20px;
@@ -53,7 +53,7 @@
       margin-right: 10px;
     }
 
-    .contact__content {
+    &__content {
       position: relative;
       display: flex;
       padding-bottom: 10px;
@@ -104,8 +104,8 @@
 
 @media screen and (max-width: 705px) {
   #contact {
-    .contact-wrapper {
-      .contact__content {
+    .contact {
+      &__content {
         flex-direction: column;
 
         &__left {
@@ -131,8 +131,8 @@
 
 @media screen and (max-width: 385px) {
   #contact {
-    .contact-wrapper {
-      .contact__content {
+    .contact {
+      &__content {
         &__right {
           ul {
             li, a {

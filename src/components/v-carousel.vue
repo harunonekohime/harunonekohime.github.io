@@ -1,5 +1,4 @@
 <template>
-  <h2 class="drawings-title">{{ $t('carousel.title') }}</h2>
   <div class="carousel" @pointerdown.stop="startSwipe" @pointerup="endSwipe">
     <slot></slot>
   </div>
@@ -82,17 +81,6 @@ onMounted(() => {
 
   > * {
     pointer-events: none;
-  }
-}
-
-.drawings-title {
-  font-size: 20px;
-  color: #b93a3a;
-}
-
-@media screen and (max-width: 705px) {
-  .drawings-title {
-    font-size: 18px;
   }
 }
 </style>

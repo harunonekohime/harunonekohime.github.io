@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="nav">
     <div class="switch-language" @click="switchLanguage">
       <span v-if="locale === 'de'" class="fi fi-de"></span>
       <span v-else class="fi fi-gb"></span>
@@ -9,8 +9,8 @@
       <div class="nav__item__line nav__item__line-2" :class="navItemClasses()"></div>
       <div class="nav__item__line nav__item__line-3" :class="navItemClasses()"></div>
     </div>
-    <div class="nav-overlay-wall" :class="{ show: menuIsOpen }" @click="closeMenu"></div>
-    <div class="nav-overlay" :class="{ open: menuIsOpen }">
+    <div class="nav__overlay-wall" :class="{ 'nav__overlay-wall--show': menuIsOpen }" @click="closeMenu"></div>
+    <div class="nav__overlay" :class="{ 'nav__overlay--open': menuIsOpen }">
       <ul>
         <li :class="listClasses(1)" @click="setItemActive(1, 'about')">
           <font-awesome-icon class="icon" :icon="['fas', 'id-card']" />
@@ -105,7 +105,7 @@
 </script>
 
 <style lang="scss">
-  nav {
+  .nav {
     display: flex;
     justify-content: flex-end;
     position: fixed;
@@ -118,7 +118,7 @@
     z-index: 10000;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 
-    .nav__item {
+    &__item {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -193,7 +193,7 @@
       }
     }
 
-    .nav-overlay {
+    &__overlay {
       position: fixed;
       top: 60px;
       bottom: 0;
@@ -207,7 +207,7 @@
       transition: .3s ease-in-out;
       z-index: 2;
 
-      &.open {
+      &--open {
         transform: translate3d(-100%, 0px, 0px);
       }
 
@@ -249,23 +249,23 @@
           }
         }
       }
-    }
 
-    .nav-overlay-wall {
-      position: fixed;
-      top: 60px;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(0, 0, 0, 0.3);
-      z-index: 1;
-      opacity: 0;
-      pointer-events: none;
-      transition: .3s ease-in-out;
+      &-wall {
+        position: fixed;
+        top: 60px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+        opacity: 0;
+        pointer-events: none;
+        transition: .3s ease-in-out;
 
-      &.show {
-        opacity: 1;
-        pointer-events: all;
+        &--show {
+          opacity: 1;
+          pointer-events: all;
+        }
       }
     }
   }

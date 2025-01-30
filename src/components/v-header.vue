@@ -1,12 +1,12 @@
 <template>
   <header id="header">
-    <div class="description-container">
-      <div class="image-container">
-        <div class="picture"/>
+    <div class="description">
+      <div class="description__image">
+        <div></div>
       </div>
-      <div class="text-wrapper">
-        <span class="text-1">Jessica Lee Schulz</span>
-        <span class="text-2">Frontend Developer</span>
+      <div class="description__text">
+        <span>Jessica Lee Schulz</span>
+        <span>Frontend Developer</span>
       </div>
     </div>
   </header>
@@ -20,7 +20,7 @@ header {
   margin-bottom: 20px;
 }
 
-.description-container {
+.description {
   position: relative;
   display: flex;
   align-items: center;
@@ -34,7 +34,7 @@ header {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 
-  .image-container {
+  &__image {
     display: flex;
     justify-content: center;
     width: 150px;
@@ -46,7 +46,7 @@ header {
     margin-right: 15px;
     animation: zoom 1s ease forwards .2s;
 
-    .picture {
+    div {
       background: url(../assets/images/me.jpeg);
       background-size: cover;
       width: 100%;
@@ -64,7 +64,8 @@ header {
       }
     }
   }
-  .text-wrapper {
+
+  &__text {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -108,15 +109,15 @@ header {
 }
 
 @media screen and (max-width: 468px) {
-  .description-container {
+  .description {
     width: 100%;
 
-    .image-container {
+    &__image {
       width: 100px;
       height: 100px;
     }
 
-    .text-wrapper {
+    &__text {
       span {
         font-size: 18px;
       }
@@ -125,17 +126,17 @@ header {
 }
 
 @media screen and (max-width: 390px) {
-  .description-container {
+  .description {
     width: 100%;
 
-    .image-container {
+    &__image {
       min-width: 70px;
       min-height: 70px;
       width: 70px;
       height: 70px;
     }
 
-    .text-wrapper {
+    &__text {
       span {
         font-size: 16px;
       }
@@ -144,17 +145,17 @@ header {
 }
 
   @media screen and (max-width: 345px) {
-  .description-container {
+  .description {
     width: 100%;
 
-    .image-container {
+    &__image {
       min-width: 50px;
       min-height: 50px;
       width: 50px;
       height: 50px;
     }
 
-    .text-wrapper {
+    &__text {
       span {
         font-size: 12px;
       }
@@ -163,17 +164,17 @@ header {
 }
 
 @media screen and (max-width: 291px) {
-  .description-container {
+  .description {
     width: 100%;
 
-    .image-container {
+    &__image {
       min-width: 50px;
       min-height: 50px;
       width: 50px;
       height: 50px;
     }
 
-    .text-wrapper {
+    &__text {
       span {
         font-size: 12px;
       }

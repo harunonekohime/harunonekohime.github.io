@@ -48,7 +48,6 @@
   }
 
   h2 {
-    font-size: 20px;
     margin-bottom: 15px;
     margin-top: 0;
   }
@@ -87,10 +86,6 @@
       &__right {
         width: 100%;
       }
-    }
-
-    h2 {
-      font-size: 18px;
     }
 
     h3 {
