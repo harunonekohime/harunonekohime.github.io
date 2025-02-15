@@ -5,7 +5,7 @@
         <div></div>
       </div>
       <div class="description__text">
-        <span>Jessica Lee Schulz</span>
+        <h1>Jessica Lee Schulz</h1>
         <span>Frontend Developer</span>
       </div>
     </div>
@@ -72,7 +72,7 @@ header {
     align-items: center;
     text-align: center;
 
-    span {
+    h1, span {
       overflow: hidden;
       font-size: 20px;
       border-right: .15em solid #b93a3a;
@@ -85,7 +85,7 @@ header {
       animation: typing 2.5s steps(30, end) forwards, blink-caret .5s step-end infinite;
       animation-delay: 1.2s;
 
-      &:last-of-type {
+      &span {
         margin-bottom: 0px;
       }
 
@@ -105,10 +105,14 @@ header {
         50% { border-color: #b93a3a }
       }
     }
+
+    h1 {
+      font-size: 23px;
+    }
   }
 }
 
-@media screen and (max-width: 468px) {
+@media screen and (max-width: 505px) {
   .description {
     width: 100%;
 
@@ -121,11 +125,15 @@ header {
       span {
         font-size: 18px;
       }
+
+      h1 {
+        font-size: 20px;
+      }
     }
   }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 422px) {
   .description {
     width: 100%;
 
@@ -139,6 +147,10 @@ header {
     &__text {
       span {
         font-size: 16px;
+      }
+
+      h1 {
+        font-size: 18px;
       }
     }
   }
@@ -159,24 +171,9 @@ header {
       span {
         font-size: 12px;
       }
-    }
-  }
-}
 
-@media screen and (max-width: 291px) {
-  .description {
-    width: 100%;
-
-    &__image {
-      min-width: 50px;
-      min-height: 50px;
-      width: 50px;
-      height: 50px;
-    }
-
-    &__text {
-      span {
-        font-size: 12px;
+      h1 {
+        font-size: 14px;
       }
     }
   }

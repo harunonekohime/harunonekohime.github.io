@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Me",
-    "text1": "Hi, I'm Jess (✿`꒳`)ﾉ! I studied media informatics at the Cologne University of Technology and have been working as a front-end developer at RMH MEDIA GmbH since 2018. There I gained experience in developing single-page applications and landing pages with JavaScript and Vue.js.",
+    "text1": "Hi, I'm Jess (✿`꒳`)ﾉ! I studied media informatics at the Cologne University of Technology and have been working as a frontend developer since 2018. During this time I gained experience in developing single-page applications and landing pages with JavaScript and Vue.js.",
     "text2": "I love drawing, which is why I run a small shop on Etsy where I sell my drawings. I also enjoy playing video games and the piano."
   },
 
@@ -21,7 +21,7 @@
 
   "experience": {
     "title": "Experience",
-    "date1":"09.2018 – Heute",
+    "date1":"09.2018 – 02.2025",
     "company1": "RMH MEDIA GmbH",
     "position1": "Frontend Developer",
     "experience1": "Salesforce/Veeva CRM web applications with JavaScript/Vue.js",
@@ -34,7 +34,10 @@
     "experience5": "Technical documentations",
     "date3": "08.2017 – 02.2018",
     "position3": "Working student (Bachelorthesis)",
-    "bachelorthesis": "Development of an internal company reporting system"
+    "bachelorthesis": "Development of an internal company reporting system",
+    "date4": "02.2025 – TODAY",
+    "company3": "Intentive GmbH",
+    "position4": "Frontend Developer"
   },
 
   "contact": {

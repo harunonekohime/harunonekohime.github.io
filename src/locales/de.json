@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "Über Mich",
-    "text1": "Hi ich bin Jess (✿`꒳`)ﾉ! Ich habe Medieninformatik an der Technischen Hochschule Köln studiert und arbeite seit 2018 als Frontend Entwicklerin bei der RMH MEDIA GmbH. Dort sammelte ich Erfahrungen in der Entwicklung von Single-Page-Applications und Landingpages mit JavaScript und Vue.js.",
+    "text1": "Hi ich bin Jess (✿`꒳`)ﾉ! Ich habe Medieninformatik an der Technischen Hochschule Köln studiert und arbeite seit 2018 als Frontend Entwicklerin. Wärend dieser Zeit sammelte ich Erfahrungen in der Entwicklung von Single-Page-Applications und Landingpages mit JavaScript und Vue.js.",
     "text2": "Ich liebe das Zeichnen, weshalb ich nebenbei einen kleinen Shop auf Etsy betreibe, wo ich meine Zeichnungen verkaufe. Zudem spiele ich gerne Videospiele und Klavier."
   },
 
@@ -21,7 +21,7 @@
 
   "experience": {
     "title": "Berufserfahrung",
-    "date1":"09.2018 – Heute",
+    "date1":"09.2018 – 02.2025",
     "company1": "RMH MEDIA GmbH",
     "position1": "Frontend Developer",
     "experience1": "Salesforce/Veeva CRM Webanwendungen mit JavaScript/Vue.js",
@@ -34,7 +34,10 @@
     "experience5": "Technische Dokumentationen",
     "date3": "08.2017 – 02.2018",
     "position3": "Werkstudent (Bachelorarbeit)",
-    "bachelorthesis": "Entwicklung eines Firmeninternen Reporting-Systems"
+    "bachelorthesis": "Entwicklung eines Firmeninternen Reporting-Systems",
+    "date4": "02.2025 – HEUTE",
+    "company3": "Intentive GmbH",
+    "position4": "Frontend Developer"
   },
 
   "contact": {

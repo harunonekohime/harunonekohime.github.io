@@ -3,32 +3,32 @@
     <h2>{{ $t('carousel.title') }}</h2>
     <v-carousel>
       <picture>
-        <source media="(min-width:1280px)" srcset="../assets/images/kimono-bunny.jpeg" />
-        <img src="../assets/images/kimono-bunny.jpeg" alt="kimono-bunny" />
+        <source media="(min-width:300px)" srcset="../assets/images/kimono-bunny.jpeg" />
+        <img src="../assets/images/kimono-bunny.jpeg" alt="kimono-bunny" role="img" />
       </picture>
       <picture>
-        <source media="(min-width:1280px)" srcset="../assets/images/black-cat.jpeg" />
-        <img src="../assets/images/black-cat.jpeg" alt="black-cat" />
+        <source media="(min-width:300px)" srcset="../assets/images/black-cat.jpeg" />
+        <img src="../assets/images/black-cat.jpeg" alt="black-cat" role="img" />
       </picture>
       <picture>
-        <source media="(min-width:1280px)" srcset="../assets/images/squirrel.jpeg" />
-        <img src="../assets/images/squirrel.jpeg" alt="squirrel" />
+        <source media="(min-width:300px)" srcset="../assets/images/squirrel.jpeg" />
+        <img src="../assets/images/squirrel.jpeg" alt="squirrel" role="img" />
       </picture>
       <picture>
-        <source media="(min-width:1280px)" srcset="../assets/images/ramen-neko.jpeg" />
-        <img src="../assets/images/ramen-neko.jpeg" alt="ramen-neko" />
+        <source media="(min-width:300px)" srcset="../assets/images/ramen-neko.jpeg" />
+        <img src="../assets/images/ramen-neko.jpeg" alt="ramen-neko" role="img" />
       </picture>
       <picture>
-        <source media="(min-width:1280px)" srcset="../assets/images/bird.jpeg" />
-        <img src="../assets/images/bird.jpeg" alt="bird" />
+        <source media="(min-width:300px)" srcset="../assets/images/bird.jpeg" />
+        <img src="../assets/images/bird.jpeg" alt="bird" role="img" />
       </picture>
       <picture>
-        <source media="(min-width:1280px)" srcset="../assets/images/bumblebee.jpeg" />
-        <img src="../assets/images/bumblebee.jpeg" alt="bumblebee" />
+        <source media="(min-width:300px)" srcset="../assets/images/bumblebee.jpeg" />
+        <img src="../assets/images/bumblebee.jpeg" alt="bumblebee" role="img" />
       </picture>
       <picture>
-        <source media="(min-width:1280px)" srcset="../assets/images/kimono-cat.jpeg" />
-        <img src="../assets/images/kimono-cat.jpeg" alt="kimono-cat" />
+        <source media="(min-width:300px)" srcset="../assets/images/kimono-cat.jpeg" />
+        <img src="../assets/images/kimono-cat.jpeg" alt="kimono-cat" role="img" />
       </picture>
     </v-carousel>
   </section>

@@ -7,10 +7,10 @@
       @animationend="showOverlay = true"
     />
     <div class="skill-overlay" :class="{show: showOverlay}" @animationend="showSkills = true; animate = true; hideButton = true;">
-      <span style="font-size: 20px;">Skills</span>
+      <h2>Skills</h2>
       <div class="skills">
         <div class="skill-level-wrapper" v-for="skill in skills" :key="`skill-${skill}`">
-          <label class="skill">{{ skill }}</label>
+          <h3 class="skill">{{ skill }}</h3>
           <div class="line" :style="getLineStyle(skill)"></div>
         </div>
       </div>

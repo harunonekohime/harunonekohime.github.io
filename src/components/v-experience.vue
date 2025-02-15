@@ -3,6 +3,16 @@
     <h2>{{ $t('experience.title') }}</h2>
     <div class="data-block">
       <div class="data-block__left">
+        {{ $t('experience.date4') }}
+      </div>
+      <div class="data-block__right">
+        <h3>{{ $t('experience.company3') }}</h3>
+        <h4>{{ $t('experience.position4') }}</h4>
+      </div>
+    </div>
+
+    <div class="data-block">
+      <div class="data-block__left">
         {{ $t('experience.date1') }}
       </div>
       <div class="data-block__right">
