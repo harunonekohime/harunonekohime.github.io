@@ -21,6 +21,10 @@
       "width": 60
     },
     {
+      "name": "Bootstrap",
+      "width": 60
+    },
+    {
       "name": "TypeScript",
       "width": 65
     },
@@ -31,10 +35,6 @@
     {
       "name": "Node.js",
       "width": 40
-    },
-    {
-      "name": "PHP",
-      "width": 30
     },
     {
       "name": "MySQL",
@@ -51,6 +51,14 @@
     {
       "name": "Jira",
       "width": 80
+    },
+    {
+      "name": "GraphQL",
+      "width": 20
+    },
+    {
+      "name": "Nuxt.js",
+      "width": 20
     },
     {
       "name": "Figma",

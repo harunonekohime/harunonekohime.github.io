@@ -6,69 +6,26 @@
 
 <script setup lang="ts">
 import { useSlots, ref, onMounted } from 'vue';
-import type { Ref } from 'vue'
+import Carousel from './Carousel.ts';
 
-const currentSlide: Ref<number> = ref(0);
-const emit = defineEmits(['slide']);
 const items = (useSlots as any)().default();
-const autoInterval: any = ref(null);
+const carousel = ref<Carousel | null>(null);
 
-let startX = 0;
-
-const startSwipe = (event: PointerEvent) => {
-  startX = event.clientX;
-};
-
-const endSwipe = (event: PointerEvent) => {
-  const diff = event.clientX - startX;
-
-  if (diff > 10) {
-    prevSlide();
-  } else if (diff < -10) {
-    nextSlide();
+const startSwipe = (e: PointerEvent) => {
+  if (carousel.value) {
+    carousel.value.startSwipe(e);
   }
-
-  clearInterval(autoInterval.value);
-  autoInterval.value = null;
-  startAutoSlide();
 };
 
-const nextSlide = () => {
-  currentSlide.value += 1;
-
-  if (currentSlide.value >= items.length) {
-    currentSlide.value = 0;
+const endSwipe = (e: PointerEvent) => {
+  if (carousel.value) {
+    carousel.value.endSwipe(e);
   }
-
-  onSlideChange();
-};
-
-const prevSlide = () => {
-  currentSlide.value -= 1;
-
-  if (currentSlide.value < 0) {
-    currentSlide.value = items.length - 1;
-  }
-
-  onSlideChange();
-};
-
-const onSlideChange = () => {
-  emit('slide', currentSlide.value);
-  items.forEach((item: any, index: number) => {
-    item.el.style.transform = `translateX(${(index - currentSlide.value) * 100}%)`;
-  });
-};
-
-const startAutoSlide = () => {
-  autoInterval.value = setInterval(() => {
-    nextSlide();
-  }, 4000);
 };
 
 onMounted(() => {
-  onSlideChange();
-  startAutoSlide();
+  carousel.value = new Carousel(items);
+  carousel.value.startAutoSlide();
 });
 </script>
 

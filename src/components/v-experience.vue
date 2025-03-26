@@ -8,6 +8,9 @@
       <div class="data-block__right">
         <h3>{{ $t('experience.company3') }}</h3>
         <h4>{{ $t('experience.position4') }}</h4>
+        <ul>
+          <li>{{ $t('experience.experience6') }}</li>
+        </ul>
       </div>
     </div>
 

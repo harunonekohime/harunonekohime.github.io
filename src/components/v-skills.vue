@@ -19,7 +19,7 @@
 </template>
 
 <script setup lang="ts">
-  import { ref } from 'vue'
+  import { computed, ref } from 'vue'
   import type { Ref } from 'vue'
   import cvData from '../data/cv.json'
   import { useEventBus } from '@vueuse/core'
@@ -36,14 +36,16 @@
     'HTML',
     'CSS',
     'TailwindCSS',
+    'Bootstrap',
     'TypeScript',
     'JSON',
     'Node.js',
-    'PHP',
     'MySQL',
     'Jest',
     'Git',
     'Jira',
+    'GraphQL',
+    'Nuxt.js',
     'Figma',
     'Sketch',
     'Adobe Photoshop',
@@ -57,6 +59,14 @@
       ? { '--skill-width': `${skillData.width}%` }
       : { '--skill-width': '0%' }
   }
+
+  // schreibe eine computed funktion mit dem namen "skills" die die skills sortiert
+  // und dann zurückgibt
+  // const sortedSkills = computed(() => {
+  //   return skills.sort((a, b) => {
+  //     return a.localeCompare(b)
+  //   })
+  // })
 
   skillBus.on(() => {
     explode.value = true
